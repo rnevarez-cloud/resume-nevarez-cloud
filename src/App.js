@@ -43,7 +43,7 @@ function App() {
     <>
     <body>
         <div class="center">
-            <h4>You are the {displayCount} visitor!</h4>
+            <h4>You are the {count} visitor!</h4>
             <h1 class="center">Ricardo Nevarez Jr</h1>
             <div>
                 <p><a href="ricardo@nevarez.cloud">ricardo@nevarez.cloud</a> | (937) 527-7022 | <a href="https://www.linkedin.com/in/rnevarezjr/">https://www.linkedin.com/in/rnevarezjr/</a> | <a href="https://github.com/rnevarez-cloud">https://github.com/rnevarez-cloud</a></p>
