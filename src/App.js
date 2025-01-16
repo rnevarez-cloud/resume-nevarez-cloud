@@ -1,32 +1,44 @@
 import React from 'react';
 import './index.css';
+import { useState, useEffect } from 'react';
 
 function App() {
 
-  const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
-  const suffixes = {
-      one: "st",
-      two: "nd",
-      few: "rd",
-      other: "th"
-  };
+    const [count, setCount] = useState([]);
 
-  function ordinal(number) {
-      const category = english_ordinal_rules.select(number);
-      const suffix = suffixes[category];
-      return (number + suffix);
-  }
-
-  if (visitCount) {
-      visitCount = Number(visitCount) + 1;
-      localStorage.setItem("page_view", visitCount);
-    } else {
-      visitCount = 1;
-      localStorage.setItem("page_view", 1);
+    const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
+    const suffixes = {
+        one: "st",
+        two: "nd",
+        few: "rd",
+        other: "th"
+    };
+    
+    function ordinal(number) {
+        const category = english_ordinal_rules.select(number);
+        const suffix = suffixes[category];
+        return (number + suffix);
     }
-  
-  displayCount = ordinal(visitCount)
+    
+    useEffect(() => {
+      view_count()
+    },[])
 
+    async function view_count() {
+
+    const res = await fetch("https://function.nevarez.cloud/api/views?code=RZPgnVk8kpFqa8Qju8cV7mO4n70FVsLowSmnNm64wV0_AzFuG_CNcw%3D%3D", {
+      method: "POST",
+      headers: {
+        "Content-type": "*/*; charset=UTF-8",
+        "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+      }
+    });
+
+    const displayCount = ordinal(await res.text());
+
+    setCount(displayCount);
+  }
+    
   return (
     <>
     <body>
