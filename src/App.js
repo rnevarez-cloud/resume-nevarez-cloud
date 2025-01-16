@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-    const [count, setCount] = useState([]);
+    const [count, setCount] = useState();
 
     const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
     const suffixes = {
@@ -22,7 +22,7 @@ function App() {
     
     useEffect(() => {
       view_count()
-    },[])
+    })
 
     async function view_count() {
 
