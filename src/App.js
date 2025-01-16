@@ -26,7 +26,7 @@ function App() {
 
     async function view_count() {
 
-    const res = await fetch("https://function.nevarez.cloud/api/views?code=RZPgnVk8kpFqa8Qju8cV7mO4n70FVsLowSmnNm64wV0_AzFuG_CNcw%3D%3D", {
+    const res = await fetch("https://function.nevarez.cloud/api/views?code=BnkcFOJ3iCnYac7pQE0wDfZ7XBwCbG_ImjQsXOMW0rXGAzFuzrSNmg==", {
       method: "POST",
       headers: {
         "Content-type": "*/*; charset=UTF-8",
