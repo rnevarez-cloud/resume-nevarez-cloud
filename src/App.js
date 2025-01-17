@@ -23,23 +23,23 @@ function App() {
     }
     
     useEffect(() => {
-      view_count()
+        async function view_count() {
+
+            const res = await fetch(url, {
+              method: "POST",
+              headers: {
+                "Content-type": "*/*; charset=UTF-8",
+                "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+              }
+            });
+        
+            const displayCount = ordinal(await res.text());
+        
+            setCount(displayCount);
+          }
+
+        view_count()  
     }, [])
-
-    async function view_count() {
-
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-type": "*/*; charset=UTF-8",
-        "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
-      }
-    });
-
-    const displayCount = ordinal(await res.text());
-
-    setCount(displayCount);
-  }
     
   return (
     <>
