@@ -24,10 +24,9 @@ function App() {
     
     useEffect(() => {
       view_count()
-    },[count])
-
-    async function view_count() {
-
+    },[])
+    
+    const view_count = async () => {
         const res = await fetch(url, {
             method: "POST",
             headers: {
@@ -38,7 +37,7 @@ function App() {
 
         setCount(ordinal(await res.text()));
     }
-    
+
   return (
     <>
     <body>
