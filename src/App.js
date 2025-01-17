@@ -36,8 +36,8 @@ function App() {
         };
 
         view_count();
-        
-    },[])
+
+    },[ordinal])
 
   return (
     <>
