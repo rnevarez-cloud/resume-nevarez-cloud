@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
-    const url = "https://function.nevarez.cloud/api/views?code=" + {function_key}
+    const url = "https://function.nevarez.cloud/api/views"
 
     const [count, setCount] = useState();
 
