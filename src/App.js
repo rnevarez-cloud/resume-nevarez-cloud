@@ -3,26 +3,25 @@ import './index.css';
 import { useState, useEffect } from 'react';
 
 function App() {
-
     const url = "https://function.nevarez.cloud/api/views"
 
     const [count, setCount] = useState(null);
-
-    const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
-    const suffixes = {
-        one: "st",
-        two: "nd",
-        few: "rd",
-        other: "th"
-    };
-    
-    function ordinal(number) {
-        const category = english_ordinal_rules.select(number);
-        const suffix = suffixes[category];
-        return (number + suffix);
-    }
-    
+   
     useEffect(() => {
+        const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
+        const suffixes = {
+            one: "st",
+            two: "nd",
+            few: "rd",
+            other: "th"
+        };
+        
+        function ordinal(number) {
+            const category = english_ordinal_rules.select(number);
+            const suffix = suffixes[category];
+            return (number + suffix);
+        }
+        
         const view_count = async () => {
             const res = await fetch(url, {
                 method: "POST",
@@ -37,7 +36,7 @@ function App() {
 
         view_count();
 
-    },[ordinal])
+    },[])
 
   return (
     <>
