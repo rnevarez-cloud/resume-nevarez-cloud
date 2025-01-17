@@ -6,7 +6,7 @@ function App() {
 
     const url = "https://function.nevarez.cloud/api/views"
 
-    const [count, setCount] = useState(null);
+    const [count, setCount] = useState([null]);
 
     const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
     const suffixes = {
