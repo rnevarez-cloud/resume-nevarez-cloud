@@ -24,7 +24,7 @@ function App() {
     
     useEffect(() => {
       view_count()
-    })
+    }, [])
 
     async function view_count() {
 
