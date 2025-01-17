@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 
 function App() {
 
+    const url = "https://function.nevarez.cloud/api/views?code=" + {function_key}
+
     const [count, setCount] = useState();
 
     const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
@@ -26,7 +28,7 @@ function App() {
 
     async function view_count() {
 
-    const res = await fetch("https://function.nevarez.cloud/api/views?code=BnkcFOJ3iCnYac7pQE0wDfZ7XBwCbG_ImjQsXOMW0rXGAzFuzrSNmg==", {
+    const res = await fetch(url, {
       method: "POST",
       headers: {
         "Content-type": "*/*; charset=UTF-8",
