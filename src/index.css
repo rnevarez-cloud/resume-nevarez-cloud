@@ -7,15 +7,28 @@
     text-align: center;
 }
 
-.left-right-align span { 
-    display:block;
-    float:right;
-    margin-left:10px;
-    text-align:left;
+@media only screen and (min-width: 40em) {
+    .left-right-align span { 
+        display:block;
+        float:right;
+        margin-left:10px;
+        text-align:left;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    span {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 63em) {
+    body {
+        margin: 0 20% 0 20%;
+    }
 }
 
 body {
-    margin: 0 10% 0 10%;
     font-family: 'Garamond';
 }
 
