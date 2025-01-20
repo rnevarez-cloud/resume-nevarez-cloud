@@ -94,8 +94,8 @@ function App() {
             <hr />
             <p><b>Operating Systems</b> - Windows, Linux</p>
             <p><b>Jira</b> - Automations, workflows, dashboards, filters, ScriptRunner, Tempo Timesheets</p>
-            <p><b>Programming/Scripting</b> - Apache Groovy, HTML, PowerShell, Python</p>
-            <p><b>Software</b> - Jira Service Management, Confluence, Opsgenie, VMware, LogicMontior, Internet Information Services (IIS), Apache, JBoss/Payara, Ansible, REST APIs, Microsoft SQL Server, RoyalTS</p>
+            <p><b>Programming/Scripting</b> - Apache Groovy, JavaScript, HTML, PowerShell, Python</p>
+            <p><b>Software</b> - Jira Service Management, Confluence, Opsgenie, VMware, LogicMontior, Internet Information Services (IIS), Apache, JBoss/Payara, Ansible, REST APIs, Microsoft SQL Server, RoyalTS, Microsoft Azure</p>
             <p><b>Network</b> - Active Directory, DNS, DHCP, TCP/IP</p>
         </div>
     </body>
