@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.css';
+import { useState, useEffect } from 'react';
 
 function App() {
 const url = "https://function.nevarez.cloud/api/views"
