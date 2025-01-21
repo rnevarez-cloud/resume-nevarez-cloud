@@ -40,7 +40,7 @@ function App() {
     return (
     <>
     <div class="center">
-        {count && <h4>You are the {storedCount} visitor!</h4>}
+        {storedCount && <h4>You are the {storedCount} visitor!</h4>}
         <h1>Ricardo Nevarez Jr</h1>
         <nav>
             <a href='/'>Resume</a> | <a href='Projects'>Projects</a>
