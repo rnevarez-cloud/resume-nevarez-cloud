@@ -7,8 +7,6 @@ import Projects from './components/Projects';
 function App() {
     const url = "https://function.nevarez.cloud/api/views"
 
-    const storedCount = sessionStorage.getItem("count");
-  
     const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
     const suffixes = {
         one: "st",
@@ -36,6 +34,7 @@ function App() {
     };
 
     view_count();
+    const storedCount = sessionStorage.getItem("count");
 
     return (
     <>
