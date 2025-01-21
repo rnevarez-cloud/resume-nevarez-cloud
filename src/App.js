@@ -33,12 +33,15 @@ function App() {
         sessionStorage.setItem("count",ordinal(await res.text()));
     };
 
-    let storedCount
+    const [storedCount, setStoredCount] = useState(sessionStorage.getItem("count"));
 
-    if (!sessionStorage.getItem("count")) {
-        view_count();
-        storedCount = sessionStorage.getItem("count");
-    }
+    useEffect(() => {
+        if (!storedCount) {
+            view_count().then(() => {
+                setStoredCount(sessionStorage.getItem("count"));
+            });
+        }
+    }, [storedCount]);
 
     return (
     <>
