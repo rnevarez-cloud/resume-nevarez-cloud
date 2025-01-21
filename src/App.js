@@ -9,12 +9,11 @@ function App() {
   return (
     <>
     <nav>
-        <a href='Resume'>Resume</a> | 
+        <a href='/'>Resume</a> | 
         <a href='Projects'>Projects</a>
     </nav>  
     <Routes>
         <Route path="/" element={<Resume />} />
-        <Route path='Resume' element={<Resume />} />
         <Route path="Projects" element={<Projects />} />
     </Routes>
     </>
