@@ -35,7 +35,7 @@ function App() {
 
     let storedCount
 
-    if (sessionStorage.getItem("count").length == 0) {
+    if (!sessionStorage.getItem("count")) {
         view_count();
         storedCount = sessionStorage.getItem("count");
     }
