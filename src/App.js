@@ -33,8 +33,12 @@ function App() {
         sessionStorage.setItem("count",ordinal(await res.text()));
     };
 
-    view_count();
-    const storedCount = sessionStorage.getItem("count");
+    let storedCount
+
+    if (sessionStorage.getItem("count").length == 0) {
+        view_count();
+        storedCount = sessionStorage.getItem("count");
+    }
 
     return (
     <>
