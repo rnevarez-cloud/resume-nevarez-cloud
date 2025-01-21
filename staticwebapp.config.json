@@ -1,14 +1,5 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html"
-  },
-  "routes": [
-    {
-      "route": "/projects",
-      "methods": [
-        "get"
-      ],
-      "rewrite": "/components/Projects.js"
-    }
-  ]
+  }
 }
