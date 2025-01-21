@@ -37,7 +37,7 @@ function App() {
             });
             
             setCount(ordinal(await res.text()));
-            sessionStorage.setItem("count", count);
+            sessionStorage.setItem(ordinal(await res.text()));
         };
 
         view_count();
