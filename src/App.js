@@ -13,7 +13,9 @@ function App() {
         <Route path='Resume' element={<Resume />} />
         <Route path="Projects" element={<Projects />} />
     </Routes>
-    <nav><a href='/Resume/'>Resume</a> | <a href='/Projects/'>Projects</a></nav>
+    <body class="center">
+        <nav><a href='/Resume/'>Resume</a> | <a href='/Projects/'>Projects</a></nav>
+    </body>
   </>
   ) 
 }

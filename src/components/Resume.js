@@ -45,7 +45,7 @@ function Resume() {
             {count && <h4>You are the {count} visitor!</h4>}
             <h1 class="center">Ricardo Nevarez Jr</h1>
             <div>
-                <p><a href="ricardo@nevarez.cloud">ricardo@nevarez.cloud</a> | <a href="https://www.linkedin.com/in/rnevarezjr/">https://www.linkedin.com/in/rnevarezjr/</a> | <a href="https://github.com/rnevarez-cloud">https://github.com/rnevarez-cloud</a></p>
+                <p><a href="mailto:ricardo@nevarez.cloud">ricardo@nevarez.cloud</a> | <a href="https://www.linkedin.com/in/rnevarezjr/">https://www.linkedin.com/in/rnevarezjr/</a> | <a href="https://github.com/rnevarez-cloud">https://github.com/rnevarez-cloud</a></p>
             </div>
         </div>
         <div>
