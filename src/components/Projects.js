@@ -5,11 +5,9 @@ function Projects() {
 
   return (
     <>
-    <body>
-        <div class="center">
+      <div class="center">
             <h1 class="center">Projects</h1>
-        </div>
-    </body>
+      </div>
   </>
   ) 
 }

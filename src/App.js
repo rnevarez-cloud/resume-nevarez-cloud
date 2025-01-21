@@ -8,7 +8,7 @@ import Projects from './components/Projects';
 function App() {
   return (
     <>
-    <nav>
+    <nav class="center">
         <a href='/'>Resume</a> | 
         <a href='Projects'>Projects</a>
     </nav>  
