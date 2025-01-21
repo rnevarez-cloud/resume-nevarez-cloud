@@ -8,8 +8,7 @@
       "methods": [
         "get"
       ],
-      "rewrite": "/components/Projects.js",
-      "statusCode": 200
+      "rewrite": "/components/Projects.js"
     }
   ]
 }
