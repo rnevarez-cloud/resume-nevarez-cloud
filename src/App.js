@@ -8,6 +8,8 @@ import Projects from './components/Projects';
 function App() {
     const url = "https://function.nevarez.cloud/api/views"
 
+    const storedCount = sessionStorage.getItem("count");
+
     const [count, setCount] = useState(null);
    
     useEffect(() => {
@@ -35,6 +37,7 @@ function App() {
             });
             
             setCount(ordinal(await res.text()));
+            sessionStorage.setItem("count", count);
         };
 
         view_count();
@@ -44,7 +47,7 @@ function App() {
     return (
     <>
     <div class="center">
-        {count && <h4>You are the {count} visitor!</h4>}
+        {count && <h4>You are the {storedCount} visitor!</h4>}
         <h1>Ricardo Nevarez Jr</h1>
         <nav>
             <a href='/'>Resume</a> | <a href='Projects'>Projects</a>
