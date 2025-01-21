@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 
