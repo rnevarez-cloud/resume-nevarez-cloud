@@ -43,12 +43,14 @@ function App() {
 
     return (
     <>
-    {count && <h4>You are the {count} visitor!</h4>}
-    <h1 class="center">Ricardo Nevarez Jr</h1>
-    <nav class="center">
-        <a href='/'>Resume</a> | 
-        <a href='Projects'>Projects</a>
-    </nav>  
+    <div class="center">
+        {count && <h4>You are the {count} visitor!</h4>}
+        <h1>Ricardo Nevarez Jr</h1>
+        <nav>
+            <a href='/'>Resume</a> | 
+            <a href='Projects'>Projects</a>
+        </nav> 
+    </div> 
     <Routes>
         <Route path="/" element={<Resume />} />
         <Route path="Projects" element={<Projects />} />
