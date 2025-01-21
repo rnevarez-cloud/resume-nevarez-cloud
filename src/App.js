@@ -47,8 +47,7 @@ function App() {
         {count && <h4>You are the {count} visitor!</h4>}
         <h1>Ricardo Nevarez Jr</h1>
         <nav>
-            <a href='/'>Resume</a> | 
-            <a href='Projects'>Projects</a>
+            <a href='/'>Resume</a> | <a href='Projects'>Projects</a>
         </nav> 
     </div> 
     <Routes>
