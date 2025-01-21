@@ -1,13 +1,50 @@
 import React from 'react';
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 
-
 function App() {
-  return (
+    const url = "https://function.nevarez.cloud/api/views"
+
+    const [count, setCount] = useState(null);
+   
+    useEffect(() => {
+        const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
+        const suffixes = {
+            one: "st",
+            two: "nd",
+            few: "rd",
+            other: "th"
+        };
+        
+        function ordinal(number) {
+            const category = english_ordinal_rules.select(number);
+            const suffix = suffixes[category];
+            return (number + suffix);
+        }
+        
+        const view_count = async () => {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: {
+                "Content-type": "*/*; charset=UTF-8",
+                "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+                }
+            });
+            
+            setCount(ordinal(await res.text()));
+        };
+
+        view_count();
+
+    },[])
+
+    return (
     <>
+    {count && <h4>You are the {count} visitor!</h4>}
+    <h1 class="center">Ricardo Nevarez Jr</h1>
     <nav class="center">
         <a href='/'>Resume</a> | 
         <a href='Projects'>Projects</a>

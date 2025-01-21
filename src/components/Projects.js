@@ -2,7 +2,6 @@ import React from 'react';
 import '../index.css';
 
 function Projects() {
-
   return (
     <>
       <div class="center">
