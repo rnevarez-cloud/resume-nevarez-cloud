@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
 import '../index.css';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import Markdown from 'react-markdown';
 import post from './posts/projects/2025-01-22-azure.md'
 
