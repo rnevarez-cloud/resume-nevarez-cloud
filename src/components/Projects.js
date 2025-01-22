@@ -4,11 +4,14 @@ import Markdown from 'react-markdown';
 import post from './posts/projects/2025-01-22-azure.md'
 
 function Projects() {
+  const text = fetch(post)
+  .then(response => response.text())
+  
   return (
     <>
       <div class="center">
             <h1 class="center">Projects</h1>
-            <Markdown>{post}</Markdown>
+            <Markdown>{text}</Markdown>
       </div>
   </>
   ) 
