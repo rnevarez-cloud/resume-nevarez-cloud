@@ -15,7 +15,7 @@ function Projects() {
   
   return (
     <>
-      <div class="center">
+      <div>
             <h1 class="center">Projects</h1>
             <Markdown>{text}</Markdown>
       </div>
