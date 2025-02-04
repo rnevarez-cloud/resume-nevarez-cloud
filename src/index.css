@@ -3,6 +3,11 @@
     src: url(../public/GARA.TTF);
 }
 
+@font-face {
+    font-family: FilsonProBlack;
+    src: url(../public/FilsonProBlack.ttf);
+}
+
 .center {
     text-align: center;
 }
@@ -34,4 +39,9 @@ body {
 
 hr {
     margin-top: -1%;
+}
+
+.blog {
+    font-family: 'FilsonProBlack';
+    font-size: 2em;
 }
