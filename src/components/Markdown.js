@@ -1,7 +1,7 @@
 import React from 'react';
 import Markdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export function MarkdownRenderer({ children: markdown }) {
   return (
@@ -13,7 +13,7 @@ export function MarkdownRenderer({ children: markdown }) {
             <SyntaxHighlighter
               PreTag="div"
               language={match[1]}
-              style={dark}
+              style={dracula}
               {...rest}
             >
               {children}
