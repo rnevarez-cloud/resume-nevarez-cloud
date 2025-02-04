@@ -1,9 +1,8 @@
 import '../index.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Markdown from 'react-markdown';
+import {MarkdownRenderer as Markdown} from './Markdown.js';
 import post from './posts/projects/2025-01-22-azure.md'
-import CodeBlock from "./CodeBlock";
 
 function Projects() {
   const [text, setText] = useState('');
@@ -18,7 +17,7 @@ function Projects() {
     <>
       <div>
             <h1 class="center">Projects</h1>
-            <Markdown components={{ code: CodeBlock }}> 
+            <Markdown>
               {text}
             </Markdown>
       </div>
