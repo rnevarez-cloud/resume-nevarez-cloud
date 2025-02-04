@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: FilsonProBlack;
-    src: url(../public/FilsonProBlack.ttf);
+    font-family: FilsonProRegular;
+    src: url(../public/FilsonProRegular.ttf);
 }
 
 .center {
@@ -43,5 +43,5 @@ hr {
 
 .blog {
     font-family: 'FilsonProBlack';
-    font-size: 2em;
+    font-size: 1em;
 }
