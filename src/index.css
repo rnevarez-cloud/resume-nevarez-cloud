@@ -4,8 +4,8 @@
 }
 
 @font-face {
-    font-family: FilsonProRegular;
-    src: url(../public/FilsonProRegular.ttf);
+    font-family: Swiss721;
+    src: url(../public/swiss.ttf);
 }
 
 .center {
@@ -42,7 +42,7 @@ hr {
 }
 
 .blog {
-    font-family: 'FilsonProRegular';
+    font-family: 'Swiss721';
     font-size: 1.2em;
     margin: 0 15% 0 15%;
 }
