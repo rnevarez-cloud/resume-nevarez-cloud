@@ -18,7 +18,7 @@ function Projects() {
     <>
       <div>
             <h1 class="center">Projects</h1>
-            <ReactMarkdown
+            <Markdown
               source={text}
               renderers={{ code: CodeBlock }}
             />
