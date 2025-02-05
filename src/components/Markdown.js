@@ -2,11 +2,14 @@ import React from 'react';
 import Markdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
+import rehypeRaw from 'rehype-raw';
 
 export function MarkdownRenderer({ children: markdown }) {
   return (
     <Markdown
+      rehypePlugins={[rehypeRaw]}
       components={{
+        details: Expand,
         code({ className, children, ...rest }) {
           const match = /language-(\w+)/.exec(className || "");
           return match ? (
