@@ -60,7 +60,7 @@ hr {
 }
 
 @media only screen and (max-width: 40em) {
-    span {
+    pre {
         scale: .6;
     }
 }
