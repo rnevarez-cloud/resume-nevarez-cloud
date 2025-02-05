@@ -46,3 +46,15 @@ hr {
     font-size: 1.2em;
     margin: 0 15% 0 15%;
 }
+
+@media only screen and (min-width: 40em) {
+    pre {
+        scale: .8;
+    }
+}
+
+@media only screen and (max-width: 40em) {
+    span {
+        scale: .6;
+    }
+}
