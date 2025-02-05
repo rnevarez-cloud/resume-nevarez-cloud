@@ -34,7 +34,7 @@
 }
 
 body {
-    font-family: 'Garamond';
+    font-family: 'Swiss721';
     color: #EDEEF2;
     background-color: #312F37;
 }
@@ -49,7 +49,6 @@ hr {
 }
 
 .blog {
-    font-family: 'Swiss721';
     font-size: 1.2em;
     margin: 0 15% 0 15%;
 }
