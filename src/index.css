@@ -35,6 +35,13 @@
 
 body {
     font-family: 'Garamond';
+    color: #EDEEF2;
+    background-color: #312F37;
+}
+
+a {
+    color: #EDEEF2;
+    text-decoration: none;
 }
 
 hr {
