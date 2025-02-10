@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import Scores from './components/Scores';
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
     <Routes>
         <Route path="/" element={<Resume />} />
         <Route path="Projects" element={<Projects />} />
+        <Route path="Scores" element={<Scores />} />
     </Routes>
     </>
   ) 
