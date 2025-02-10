@@ -3,29 +3,25 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 function Scores() {
-      const [storedScores, setStoredScores] = useState(sessionStorage.getItem("scores"));
+      const [scores, setScores] = useState([]);
   
       useEffect(() => {
-          const url = "https://scores.nevarez.cloud/api/scores"
+        scoresReq()
+      },[])
+
+      const url = "https://scores.nevarez.cloud/api/scores"
           
-          const scores = async () => {
-              await fetch(url, {
-                  method: "GET",
-                  headers: {
-                  "Content-type": "*/*; charset=UTF-8",
-                  "Access-Control-Allow-Origin": "https://scores.nevarez.cloud"
-                  }
-              });
-              
-              sessionStorage.setItem("scores",scores);
-          };
-  
-          if (!storedscores) {
-              view_scores().then(() => {
-                setStoredScores(sessionStorage.getItem("scores"));
-              });
-          }
-      }, [storedScores]);
+      const scoresReq = async () => {
+        const res = await fetch(url, {
+              method: "GET",
+              headers: {
+              "Content-type": "*/*; charset=UTF-8",
+              "Access-Control-Allow-Origin": "https://scores.nevarez.cloud"
+              }
+          });
+          
+          setScores(await res.json());
+        };
   
   return (
     <>
