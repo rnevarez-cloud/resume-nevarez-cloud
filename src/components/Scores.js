@@ -21,9 +21,12 @@ function Scores() {
       <div class="scores">
       {scores.map((data) => {
          return(
-          <div class="score">
+          <>
+          <div class="score center">
             {data.score}
           </div>
+          <br />
+          </>
          )   
       })}
       </div>
