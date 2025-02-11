@@ -29,7 +29,6 @@ function Scores() {
               {data.score}
             </div>
           </div>
-          <br />
           </>
          )   
       })}
