@@ -23,8 +23,11 @@ function Scores() {
          return(
           <>
           <br />
-          <div class="score center">
-            {data.score}
+          <div class="center">
+            <p>{data.puzzle}</p>
+            <div class="score">
+              {data.score}
+            </div>
           </div>
           <br />
           </>
