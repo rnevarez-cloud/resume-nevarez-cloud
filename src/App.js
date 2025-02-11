@@ -6,45 +6,45 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Scores from './components/Scores';
 
+const url = "https://function.nevarez.cloud/api/views"
+
+const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
+const suffixes = {
+    one: "st",
+    two: "nd",
+    few: "rd",
+    other: "th"
+};
+
+function ordinal(number) {
+    const category = english_ordinal_rules.select(number);
+    const suffix = suffixes[category];
+    return (number + suffix);
+}
+
 function App() {
 
     const [storedCount, setStoredCount] = useState(sessionStorage.getItem("count"));
+        
+    const view_count = useCallback(async () => {
+        const res = await fetch(url, {
+            method: "POST",
+            headers: {
+            "Content-type": "*/*; charset=UTF-8",
+            "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+            }
+        });
+        
+        const count = ordinal(await res.text());
+        sessionStorage.setItem("count", count);
+        setStoredCount(count);
+    }, []);
 
     useEffect(() => {
-        const url = "https://function.nevarez.cloud/api/views"
-
-        const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
-        const suffixes = {
-            one: "st",
-            two: "nd",
-            few: "rd",
-            other: "th"
-        };
-        
-        function ordinal(number) {
-            const category = english_ordinal_rules.select(number);
-            const suffix = suffixes[category];
-            return (number + suffix);
-        }
-        
-        const view_count = async () => {
-            const res = await fetch(url, {
-                method: "POST",
-                headers: {
-                "Content-type": "*/*; charset=UTF-8",
-                "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
-                }
-            });
-            
-            sessionStorage.setItem("count",ordinal(await res.text()));
-        };
-
         if (!storedCount) {
-            view_count().then(() => {
-                setStoredCount(sessionStorage.getItem("count"));
-            });
+            view_count();
         }
-    }, [storedCount]);
+    }, [storedCount, view_count]);
 
     return (
     <>
