@@ -8,6 +8,11 @@
     src: url(../public/swiss.ttf);
 }
 
+@font-face {
+    font-family: Twemoji;
+    src: url(../public/Twemoji.ttf);
+}
+
 .center {
     text-align: center;
 }
@@ -51,4 +56,8 @@ a {
 
 hr {
     margin-top: -1%;
+}
+
+.score > p {
+    font-family: 'Twemoji';
 }
