@@ -22,7 +22,7 @@ function Scores() {
       {scores.map((data) => {
          return(
           <div class="score">
-            <p>{data.score}</p>
+            {data.score}
           </div>
          )   
       })}
