@@ -22,7 +22,9 @@ function Scores() {
       {scores.map((data) => {
          return(
           <div class="score">
-            <p>{data.score}</p>
+            {data.score.split('\n').map((line, index) => (
+              <p key={index}>{line}</p>
+            ))}
           </div>
          )   
       })}
