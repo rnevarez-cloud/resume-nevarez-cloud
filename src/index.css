@@ -67,4 +67,6 @@ hr {
                "EmojiOne Color",
                "Android Emoji",
                sans-serif;
+
+    white-space: pre-line;
 }
