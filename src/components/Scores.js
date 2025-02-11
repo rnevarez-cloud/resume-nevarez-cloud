@@ -7,9 +7,9 @@ function Scores() {
   const [scores, setScores] = useState([]);
 
   const scoresReq = useCallback(async () => {
-    const res = await fetch(url);  
+    const res = await fetch(url);
     setScores(await res.json());
-  }) 
+  }, []);
 
   useEffect(() => {
     scoresReq()
