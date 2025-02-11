@@ -1,21 +1,20 @@
+import React, { useState, useEffect, useCallback } from 'react';
 import '../index.css';
-import React from 'react';
-import { useState, useEffect } from 'react';
+
+const url = "https://scores.nevarez.cloud/api/scores"
 
 function Scores() {
   const [scores, setScores] = useState([]);
 
-  useEffect(() => {
-    scoresReq()
-  },[])
-
-  const url = "https://scores.nevarez.cloud/api/scores"
-      
-  const scoresReq = async () => {
+  const scoresReq = useCallback(async () => {
     const res = await fetch(url);  
     setScores(await res.json());
-  }  
-  
+  }) 
+
+  useEffect(() => {
+    scoresReq()
+  },[scoresReq])
+
   return (
     <>
       <div class="scores">
