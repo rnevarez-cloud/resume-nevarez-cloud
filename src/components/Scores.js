@@ -14,7 +14,7 @@ function Scores() {
 
   useEffect(() => {
     scoresReq()
-  },[scores])
+  },[scoresReq,scores])
 
   return (
     <>
