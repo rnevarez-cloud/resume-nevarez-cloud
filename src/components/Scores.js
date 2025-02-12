@@ -5,16 +5,24 @@ import emoji from 'react-easy-emoji';
 const url = "https://scores.nevarez.cloud/api/scores"
 
 function Scores() {
-  const [scores, setScores] = useState([]);
+  const [scores, setScores] = useState(() => {
+    const savedScores = sessionStorage.getItem("scores");
+    return savedScores ? JSON.parse(savedScores) : [];
+  });
 
   const scoresReq = useCallback(async () => {
     const res = await fetch(url);
-    setScores(await res.json());
+    const data = await res.json();
+    setScores(data);
+    sessionStorage.setItem("scores", JSON.stringify(data));
+
   }, []);
 
   useEffect(() => {
-    scoresReq()
-  },[scoresReq,scores])
+    if(scores.length === 0) {
+      scoresReq();
+    }
+  },[scores, scoresReq]);
 
   return (
     <>
