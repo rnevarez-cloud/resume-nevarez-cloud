@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../index.css';
+import emoji from 'react-easy-emoji';
 
 const url = "https://scores.nevarez.cloud/api/scores"
 
@@ -25,7 +26,7 @@ function Scores() {
           <div class="center">
             <p>{data.puzzle}</p>
             <div class="score">
-              {data.score}
+              {emoji(data.score)}
             </div>
           </div>
           </>
