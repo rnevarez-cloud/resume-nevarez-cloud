@@ -25,7 +25,7 @@ function Scores() {
           <br />
           <div class="center">
             <p>{data.puzzle}</p>
-            <div class="score">
+            <div id={data.game} class="score">
               {emoji(data.score)}
             </div>
           </div>

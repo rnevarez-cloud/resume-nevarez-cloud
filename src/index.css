@@ -70,4 +70,14 @@ hr {
 
     white-space: pre-wrap;
     font-size: 1.2em;
+    line-height: 1.2em;
+    background-color: #EDEEF2;
+    border-radius: 1em;
+}
+
+#Wordle, #Connections {
+    width: 6em;
+    height: 6em;
+    margin: auto;
+    padding: 3em;
 }
