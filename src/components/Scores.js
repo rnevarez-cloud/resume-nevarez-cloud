@@ -18,20 +18,18 @@ function Scores() {
 
   return (
     <>
-      <div class="scores">
-      {scores.map((data) => {
-         return(
-          <>
-          <br />
-          <div class="center">
-            <p>{data.puzzle}</p>
-            <div id={data.game} class="score">
-              {emoji(data.score)}
+      <div className="scores">
+      {scores.map((data) => (
+          <div key={data.game}>
+            <br />
+            <div className="center">
+              <p>{data.puzzle}</p>
+              <div id={data.game} className="score">
+                {emoji(data.score)}
+              </div>
             </div>
           </div>
-          </>
-         )   
-      })}
+      ))}
       </div>
   </>
   ) 

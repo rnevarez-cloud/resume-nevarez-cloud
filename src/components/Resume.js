@@ -5,7 +5,7 @@ function Resume() {
 
   return (
     <>
-    <div class="center">
+    <div className="center">
         <div>
             <p><a href="mailto:ricardo@nevarez.cloud">ricardo@nevarez.cloud</a> | <a href="https://www.linkedin.com/in/rnevarezjr/">https://www.linkedin.com/in/rnevarezjr/</a> | <a href="https://github.com/rnevarez-cloud">https://github.com/rnevarez-cloud</a></p>
         </div>
@@ -14,8 +14,8 @@ function Resume() {
         <h3>EXPERIENCE</h3>
         <hr />
         <div>
-            <p class="left-right-align"><b>Jenzabar<span>Boston, MA</span></b></p>
-            <p class="left-right-align">Systems Administrator III - Team Lead <span>January 2023 - November 2024</span></p>
+            <p className="left-right-align"><b>Jenzabar<span>Boston, MA</span></b></p>
+            <p className="left-right-align">Systems Administrator III - Team Lead <span>January 2023 - November 2024</span></p>
             <ul>
                 <li>Led an implementation project for Jira Service Management at an enterprise level to streamline the customer and support analyst experience</li>
                 <li>Created comprehensive technical documentation to enforce consistent procedures and practices across the team, enabling effective knowledge transfer and reducing errors by 20%</li>
@@ -26,7 +26,7 @@ function Resume() {
             </ul>
         </div>
         <div>
-            <p class="left-right-align">Systems Administrator II<span>April 2021 - January 2024</span></p>
+            <p className="left-right-align">Systems Administrator II<span>April 2021 - January 2024</span></p>
             <ul>
                 <li>Installed, configured, tested, and deployed core products for Jenzabar, ensuring smooth and efficient operation of critical systems</li>
                 <li>Conducted regular server checks to identify and resolve potential issues, minimizing downtime and ensuring optimal performance</li>
@@ -36,7 +36,7 @@ function Resume() {
             </ul>
         </div>
         <div>
-            <p class="left-right-align">Systems Administrator I<span>June 2019 - April 2021</span></p>
+            <p className="left-right-align">Systems Administrator I<span>June 2019 - April 2021</span></p>
             <ul>
                 <li>Provided comprehensive Monthly Remote Management reports to customers, delivering key insights and updates on system performance and activity</li>
                 <li>Assisted customers in resolving system issues, offering technical expertise and escalating problems when necessary to ensure timely and effective resolution</li>
@@ -46,10 +46,10 @@ function Resume() {
     <div>
         <h3>EDUCATION</h3>
         <hr />
-        <p class="left-right-align"><b>Bellevue University<span>Bellevue, NE</span></b></p>
-        <p class="left-right-align">B.S. in Information Technology <span>August 2020 - 2025</span></p>
-        <p class="left-right-align"><b>Southern State Community College<span>Hillsboro, OH</span></b></p>
-        <p class="left-right-align">A.S. in Computer Information Technology <span>August 2018 – May 2019</span></p>        
+        <p className="left-right-align"><b>Bellevue University<span>Bellevue, NE</span></b></p>
+        <p className="left-right-align">B.S. in Information Technology <span>August 2020 - 2025</span></p>
+        <p className="left-right-align"><b>Southern State Community College<span>Hillsboro, OH</span></b></p>
+        <p className="left-right-align">A.S. in Computer Information Technology <span>August 2018 – May 2019</span></p>        
     </div>
     <div>
         <h3>SKILLS</h3>
