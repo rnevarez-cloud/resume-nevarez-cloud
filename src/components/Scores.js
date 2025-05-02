@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../index.css';
 import emoji from 'react-easy-emoji';
 import {MarkdownRenderer as Markdown} from './Markdown.js';
