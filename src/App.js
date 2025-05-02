@@ -23,20 +23,29 @@ function ordinal(number) {
 
 function App() {
 
-    const [storedCount, setStoredCount] = useState(sessionStorage.getItem("count"));
-        
+    const [storedCount, setStoredCount] = useState(() => sessionStorage.getItem("count"));
+
     const view_count = useCallback(async () => {
-        const res = await fetch(url, {
-            method: "POST",
-            headers: {
-            "Content-type": "*/*; charset=UTF-8",
-            "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+        try {
+            const res = await fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json; charset=UTF-8",
+                    "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+                }
+            });
+
+            if (!res.ok) {
+                console.error("Failed to fetch view count");
+                return;
             }
-        });
-        
-        const count = ordinal(await res.text());
-        sessionStorage.setItem("count", count);
-        setStoredCount(count);
+
+            const count = ordinal(Number(await res.text()));
+            sessionStorage.setItem("count", count);
+            setStoredCount(count);
+        } catch (error) {
+            console.error("Error fetching view count:", error);
+        }
     }, []);
 
     useEffect(() => {
