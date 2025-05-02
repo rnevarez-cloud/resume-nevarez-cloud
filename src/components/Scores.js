@@ -1,24 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import '../index.css';
 import emoji from 'react-easy-emoji';
-import {MarkdownRenderer as Markdown} from './Markdown.js';
-import ScoreFile from './scores/2025-05-02.md'
+
+const url = "https://scores.nevarez.cloud/api/scores"
 
 function Scores() {
-  const [score, setScore] = useState('');
-  
+  const [scores, setScores] = useState(() => {
+    const savedScores = sessionStorage.getItem("scores");
+    return savedScores ? JSON.parse(savedScores) : [];
+  });
+
+  const scoresReq = useCallback(async () => {
+    const res = await fetch(url);
+    const data = await res.json();
+    setScores(data);
+    sessionStorage.setItem("scores", JSON.stringify(data));
+
+  }, []);
+
   useEffect(() => {
-    fetch(ScoreFile)
-      .then((response) => response.text())
-      .then(score => setScore(score));
-  },[]);
+    if(scores.length === 0) {
+      scoresReq();
+    }
+  },[scores, scoresReq]);
 
   return (
     <>
       <div className="scores">
-            <Markdown>
-              {emoji(score)}
-            </Markdown>
+      {scores.map((data) => (
+          <div key={data.game}>
+            <br />
+            <div className="center">
+              <p>{data.puzzle}</p>
+              <div id={data.game} className="score">
+                {emoji(data.score)}
+              </div>
+            </div>
+          </div>
+      ))}
       </div>
   </>
   ) 
