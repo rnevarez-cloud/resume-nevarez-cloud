@@ -1,11 +1,27 @@
-import React from 'react';
-import Markdown from 'react-markdown';
+import React, { useState, useEffect, useCallback } from 'react';
+import '../index.css';
 import emoji from 'react-easy-emoji';
+import {MarkdownRenderer as Markdown} from './Markdown.js';
+import ScoreFile from './scores/2025-05-02.md'
 
-export function MarkdownRenderer({ children: markdown }) {
+function Scores() {
+  const [score, setScore] = useState('');
+  
+  useEffect(() => {
+    fetch(ScoreFile)
+      .then((response) => response.text())
+      .then(score => setScore(score));
+  },[]);
+
   return (
-    <Markdown>
-      {emoji(markdown)}
-    </Markdown>
-  );
+    <>
+      <div className="scores">
+            <Markdown>
+              {emoji(score)}
+            </Markdown>
+      </div>
+  </>
+  ) 
 }
+
+export default Scores;
