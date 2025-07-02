@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import Resume from './components/Resume';
@@ -25,37 +25,35 @@ function ordinal(number) {
 
 function App() {
 
-    const [storedCount, setStoredCount] = useState(() => sessionStorage.getItem("count"));
-
-    const view_count = useCallback(async () => {
-        try {
-            const res = await fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8",
-                    "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
-                }
-            });
-
-            if (!res.ok) {
-                console.error("Failed to fetch view count");
-                return;
-            }
-
-            const count = ordinal(Number(await res.text()));
-            sessionStorage.setItem("count", count);
-            setStoredCount(count);
-        } catch (error) {
-            console.error("Error fetching view count:", error);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (!didViewCount) {
+    const [storedCount, setStoredCount] = useState(() => {
+        let count = sessionStorage.getItem("count");
+        if (!count && !didViewCount) {
             didViewCount = true;
-            view_count();
+            (async () => {
+                try {
+                    const res = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            "Content-type": "application/json; charset=UTF-8",
+                            "Access-Control-Allow-Origin": "https://function.nevarez.cloud"
+                        }
+                    });
+
+                    if (!res.ok) {
+                        console.error("Failed to fetch view count");
+                        return;
+                    }
+
+                    const fetchedCount = ordinal(Number(await res.text()));
+                    sessionStorage.setItem("count", fetchedCount);
+                    setStoredCount(fetchedCount);
+                } catch (error) {
+                    console.error("Error fetching view count:", error);
+                }
+            })();
         }
-    }, [view_count]);
+        return count;
+    });
 
     return (
     <>
