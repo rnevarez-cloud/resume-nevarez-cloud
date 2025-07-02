@@ -5,6 +5,8 @@ import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Scores from './components/Scores';
 
+let didViewCount = false;
+
 const url = "https://function.nevarez.cloud/api/views"
 
 const english_ordinal_rules = new Intl.PluralRules("en", {type: "ordinal"});
@@ -49,10 +51,11 @@ function App() {
     }, []);
 
     useEffect(() => {
-        if (!storedCount) {
+        if (!didViewCount) {
+            didViewCount = true;
             view_count();
         }
-    }, [storedCount, view_count]);
+    }, [didViewCount, view_count]);
 
     return (
     <>
