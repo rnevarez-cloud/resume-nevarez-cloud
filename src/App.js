@@ -55,7 +55,7 @@ function App() {
             didViewCount = true;
             view_count();
         }
-    }, [didViewCount, view_count]);
+    }, [view_count]);
 
     return (
     <>
