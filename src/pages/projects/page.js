@@ -1,8 +1,8 @@
-import '../index.css';
+import '../../index.css';
 import React from 'react';
 import { useState, useEffect } from 'react';
-import {MarkdownRenderer as Markdown} from './Markdown.js';
-import post from './posts/projects/2025-01-22-azure.md'
+import {MarkdownRenderer as Markdown} from '../../components/Markdown.js';
+import post from './2025-01-22-azure.md'
 
 function Projects() {
   const [text, setText] = useState('');
