@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './index.css';
+import '../index.css';
 import { Routes, Route } from 'react-router-dom';
-import Resume from './components/Resume';
-import Projects from './components/Projects';
-import Scores from './components/Scores';
+import Resume from '../pages/resume/page.js';
+import Projects from '../pages/projects/page.js';
+import Scores from '../pages/scores/page.js';
 
 let didViewCount = false;
 
