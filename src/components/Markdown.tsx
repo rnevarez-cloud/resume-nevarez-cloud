@@ -1,6 +1,6 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter/dist/esm';
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 import rehypeRaw from 'rehype-raw';
 
@@ -18,7 +18,7 @@ export function MarkdownRenderer({ children: markdown }) {
               style={dracula}
               {...rest}
             >
-              {children}
+              {Array.isArray(children) ? children.join('') : String(children)}
             </SyntaxHighlighter>
           ) : (
             <code {...rest} className={className}>

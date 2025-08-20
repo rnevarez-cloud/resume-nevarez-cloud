@@ -2,7 +2,7 @@
  
 import dynamic from 'next/dynamic'
  
-const App = dynamic(() => import('../app/App.js'), { ssr: false })
+const App = dynamic(() => import('../index.js'), { ssr: false })
  
 export function ClientOnly() {
   return <App />

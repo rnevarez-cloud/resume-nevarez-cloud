@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-import '../index.css';
-import { Routes, Route } from 'react-router-dom';
-import Resume from '../pages/resume/page.js';
-import Projects from '../pages/projects/page.js';
-import Scores from '../pages/scores/page.js';
+import './index.css';
+import Link from 'next/link';
 
 let didViewCount = false;
 
@@ -61,14 +58,9 @@ function App() {
         {storedCount && <h4>You are the {storedCount} visitor!</h4>}
         <h1>Ricardo Nevarez Jr</h1>
         <nav>
-            <a href='/'>Resume</a> | <a href='Projects'>Projects</a> | <a href='Scores'>NYT Game Scores</a>
+            <Link href='/resume'>Resume</Link> | <Link href='/projects'>Projects</Link> | <Link href='/scores'>NYT Game Scores</Link>
         </nav> 
     </div> 
-    <Routes>
-        <Route path="/" element={<Resume />} />
-        <Route path="Projects" element={<Projects />} />
-        <Route path="Scores" element={<Scores />} />
-    </Routes>
     </>
   ) 
 }
