@@ -14,7 +14,27 @@ function Resume() {
         <h3>EXPERIENCE</h3>
         <hr />
         <div>
+            <p className="left-right-align"><b>Koncert<span>Blue Ash, OH</span></b></p>
+            <p className="left-right-align">Site Reliability Engineer <span>November 2024 - Present</span></p>
+            <ul>
+                <li>Coordinated with development teams to identify, triage, and mitigate critical production incidents, minimizing downtime and business impact</li>
+                <li>Proactively identified and addressed the root causes of recurring incidents through in-depth analysis</li>
+                <li>Facilitated and led blameless postmortem discussions for all significant incidents, extracting key learnings, and translating findings into actionable improvements to prevent future occurrences.</li>
+                <li>Created, maintained, and refined detailed incident response SOPs to streamline troubleshooting and resolution processes, ensuring efficient and consistent incident handling.</li>
+                <li>Assisted in developing best practices and guidelines for Jira/Confluence to improve project tracking, documentation, and knowledge sharing across the team</li>
+                <li>Contributed to a 24/7 on-call rotation, responding to and resolving critical incidents to maintain system reliability and performance</li>
+            </ul>
+        </div>
+        <div>
             <p className="left-right-align"><b>Jenzabar<span>Boston, MA</span></b></p>
+            <p className="left-right-align">Atlassian Administrator -- Contractor <span>February 2025 - Present</span></p>
+            <ul>
+                <li>Designed, developed, and maintained complex automation scripts in Apache Groovy using ScriptRunner for Jira, focusing on intelligent ticket routing, streamlined workflows, and process enforcement for various operational needs, including new application upgrade deployments</li>
+                <li>Created and optimized Jira Automations to improve efficiency and reduce manual effort</li>
+                <li>Developed and implemented best practices and guidelines for Jira Service Management to improve the agent and customer experience</li>
+                <li>Established and enforced best practices in Confluence to promote organized knowledge sharing and effective collaboration across teams</li>
+                <li>Collaborated with stakeholders to identify bottlenecks and inefficiencies in existing processes, leveraging Atlassian tools to design and implement standardized, scalable solutions.</li>
+            </ul>
             <p className="left-right-align">Systems Administrator III - Team Lead <span>January 2023 - November 2024</span></p>
             <ul>
                 <li>Led an implementation project for Jira Service Management at an enterprise level to streamline the customer and support analyst experience</li>

@@ -3,7 +3,6 @@ import './index.css';
 import { Routes, Route } from 'react-router-dom';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
-import Scores from './components/Scores';
 
 let didViewCount = false;
 
@@ -61,13 +60,12 @@ function App() {
         {storedCount && <h4>You are the {storedCount} visitor!</h4>}
         <h1>Ricardo Nevarez Jr</h1>
         <nav>
-            <a href='/'>Resume</a> | <a href='Projects'>Projects</a> | <a href='Scores'>NYT Game Scores</a>
+            <a href='/'>Resume</a> | <a href='Projects'>Projects</a>
         </nav> 
     </div> 
     <Routes>
         <Route path="/" element={<Resume />} />
         <Route path="Projects" element={<Projects />} />
-        <Route path="Scores" element={<Scores />} />
     </Routes>
     </>
   ) 
