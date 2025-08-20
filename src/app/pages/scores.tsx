@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import '../index.css';
+import '../../index.css';
 import emoji from 'react-easy-emoji';
 
 const url = "https://scores.nevarez.cloud/api/scores"
