@@ -77,8 +77,13 @@ function Resume() {
         <p><b>Operating Systems</b> - Windows, Linux</p>
         <p><b>Jira</b> - Automations, workflows, dashboards, filters, ScriptRunner, Tempo Timesheets</p>
         <p><b>Programming/Scripting</b> - Apache Groovy, JavaScript, HTML, PowerShell, Python</p>
-        <p><b>Software</b> - Jira Service Management, Confluence, Opsgenie, VMware, LogicMontior, Internet Information Services (IIS), Apache, JBoss/Payara, Ansible, REST APIs, Microsoft SQL Server, RoyalTS, Microsoft Azure</p>
-        <p><b>Network</b> - Active Directory, DNS, DHCP, TCP/IP</p>
+        <p><b>Cloud</b> - Microsoft Azure</p>
+        <p><b>ITSM</b> - Jira Service Management, Confluence, Opsgenie, Supportbench, ServiceNow</p>
+        <p><b>Databases</b> - Microsoft SQL Server</p>
+        <p><b>Web Development</b> - React, Node.js, REST APIs, Markdown</p>
+        <p><b>Web Servers</b> - Internet Information Services (IIS), Apache, JBoss/Payara</p>
+        <p><b>Monitoring</b> - Prometheus, Grafana, LogicMontior, Dynatrace</p>
+        <p><b>Other</b> - Docker, Portainer, Caddy Web Server, NFS, NAS, VMWare ESXi, REST APIs, Ansible, RoyalTS</p>
     </div>
   </>
   ) 
