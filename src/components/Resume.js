@@ -14,8 +14,19 @@ function Resume() {
         <h3>EXPERIENCE</h3>
         <hr />
         <div>
+            <p className="left-right-align"><b>Yoh<span>Cincinnati, OH</span></b></p>
+            <p className="left-right-align">Sr. Jira Administrator <span>October 2025 - Present</span></p>
+            <ul>
+                <li>Integrated Microsoft Sentinel and Jira Operations to bridge the gap between security monitoring and incident response</li>
+                <li>Designed and deployed tailored Jira Service Management configurations and automations to optimize team performance and ensure seamless service delivery</li>
+                <li>Leveraged Assets Data Manager to integrate external data from systems such as Intune, Entra, and Qualys</li>
+                <li>Developed multiple Python-based ETL pipelines to extract cloud resource data from Azure/Entra and map it dynamically into Jira Assets schemas</li>
+                <li>Designed and implemented an automated onboarding system within Jira to standardize profile creation and accelerate user access provisioning</li>
+            </ul>
+        </div>
+        <div>
             <p className="left-right-align"><b>Koncert<span>Blue Ash, OH</span></b></p>
-            <p className="left-right-align">Site Reliability Engineer <span>November 2024 - Present</span></p>
+            <p className="left-right-align">Site Reliability Engineer <span>November 2024 - October 2025</span></p>
             <ul>
                 <li>Coordinated with development teams to identify, triage, and mitigate critical production incidents, minimizing downtime and business impact</li>
                 <li>Proactively identified and addressed the root causes of recurring incidents through in-depth analysis</li>
@@ -42,7 +53,6 @@ function Resume() {
                 <li>Developed PowerShell scripts and Ansible automations to reduce application deployments and implementations from 8 hours to 4 hours</li>
                 <li>Improved corporate processes by utilizing Jira Service Management’s REST API, native automation plugin, and Apache Groovy</li>
                 <li>Supervised the day-to-day activities involved in managing connections with RoyalTS</li>
-                <li><b>Skills:</b> Virtualization · System Deployment · Documentation · Windows System Administration · Leadership · Training · System Administration · Public Speaking · PowerShell · Jira Service Management · Confluence · Jira Reporting & Filters · Opsgenie · Rest API · Apache Groovy</li>
             </ul>
         </div>
         <div>
@@ -52,7 +62,6 @@ function Resume() {
                 <li>Conducted regular server checks to identify and resolve potential issues, minimizing downtime and ensuring optimal performance</li>
                 <li>Lead for the implementation of an enterprise-wide rollout of Jira Service Management</li>
                 <li>Developed integration between Jira Service Management and Supportbench utilizing REST APIs and Apache Groovy</li>
-                <li><b>Skills:</b> Virtualization · Ansible · System Deployment · Documentation · Windows System Administration · Windows Server · SQL · Active Directory · Server Administration · Troubleshooting · Networking · Software Installation · PowerShell · Microsoft SQL Server · Logging · Monitoring · Alerting</li>
             </ul>
         </div>
         <div>
@@ -67,7 +76,7 @@ function Resume() {
         <h3>EDUCATION</h3>
         <hr />
         <p className="left-right-align"><b>Bellevue University<span>Bellevue, NE</span></b></p>
-        <p className="left-right-align">B.S. in Information Technology <span>August 2020 - 2025</span></p>
+        <p className="left-right-align">B.S. in Information Technology <span>August 2020 - March 2026</span></p>
         <p className="left-right-align"><b>Southern State Community College<span>Hillsboro, OH</span></b></p>
         <p className="left-right-align">A.S. in Computer Information Technology <span>August 2018 – May 2019</span></p>        
     </div>
@@ -77,7 +86,7 @@ function Resume() {
         <p><b>Operating Systems</b> - Windows, Linux</p>
         <p><b>Jira</b> - Automations, workflows, dashboards, filters, ScriptRunner, Tempo Timesheets</p>
         <p><b>Programming/Scripting</b> - Apache Groovy, JavaScript, HTML, PowerShell, Python</p>
-        <p><b>Cloud</b> - Microsoft Azure</p>
+        <p><b>Cloud</b> - Microsoft Azure, Terraform</p>
         <p><b>ITSM</b> - Jira Service Management, Confluence, Opsgenie, Supportbench, ServiceNow</p>
         <p><b>Databases</b> - Microsoft SQL Server</p>
         <p><b>Web Development</b> - React, Node.js, REST APIs, Markdown</p>
