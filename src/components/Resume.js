@@ -21,7 +21,7 @@ function Resume() {
                 <li>Designed and deployed tailored Jira Service Management configurations and automations to optimize team performance and ensure seamless service delivery</li>
                 <li>Leveraged Assets Data Manager to integrate external data from systems such as Intune, Entra, and Qualys</li>
                 <li>Developed multiple Python-based ETL pipelines to extract cloud resource data from Azure/Entra and map it dynamically into Jira Assets schemas</li>
-                <li>Designed and implemented an automated onboarding system within Jira to standardize profile creation and accelerate user access provisioning</li>
+                <li>Designed an automated onboarding system within Jira to standardize profile creation and accelerate user access provisioning</li>
             </ul>
         </div>
         <div>
